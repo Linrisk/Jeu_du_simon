@@ -1,0 +1,35 @@
+------------------------------------------------------------------
+
+algo du simon : 
+
+Valeurs possibles dans la generation de la touche après : 68 , 70 , 74, 75 (ces chiffres étant les codes ascii de mes touches du jeu)
+generation random entre 1 et 4 pour l'ajout à chaque niveau.
+
+1 -> Valeur dans le tableau = 68
+2--> Valeur dans le tableau = 70
+3--> Valeur dans le tableau = 74
+4--> Valeur dans le tableau = 75
+
+Tableau qui débute à 1 et qui finit quand on ajoute des touches .
+
+Etapes :
+
+-Definir un curseur i , initialise à 0
+-Definir un tableau 
+-Pour i=i+1 -> add.random dans le tebleau, donc tableau.lenght=+1;
+
+
+-------------------------------------------------------------------
+
+si i=1 , case 74 : ( getelementbyID)
+
+Visuel du Pattern avec le front:
+
+on stocke le style de notre carré de base 
+setTimeout(function(){ alert("Hello"); }, 3000);
+après un certain nombre de temps , il va revenir à son état initial afin que l'utilisateur puisse joue ;
+
+-----------------------------------------------------------------
+
+comment rendre mon carre neon
+trouver une valeur de ma couleur plus claire pour le temps où il s'eclaire avant de revenir a son etat normal 
