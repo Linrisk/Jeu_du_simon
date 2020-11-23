@@ -25,10 +25,13 @@
     width: 200px ;
     background-color: rgba(90,153,248,1);  
 }
+#help {
+    border-radius: 50%;
 
+}
 h1{
 
-	font-size: 130px ;
+	font-size: 160px ;
  
 }
 
@@ -46,11 +49,19 @@ html {
 }
 
 
+
+
 #perdu {
 	display: none;
 }
 #start {
 	margin-top: 30px;
+  font-size:30px;
+}
+
+#start2 {
+  text-decoration: none !important;
+  color: white !important;
 }
 
 #infos {
@@ -106,14 +117,36 @@ body{
  url("assets/fonts/Lato-Bold.ttf") format("ttf");
 }
 
+@font-face {
+ font-family: 'Lato3';
+ src: local("Lato-Italic"), 
+ url("assets/fonts/Lato-Italic.ttf") format("ttf");
+}
+
+
+
+#aide {
+  width: 3%;
+  height: 3% !important;
+    transform: rotate(5deg);
+    margin-right: 0.5%;
+    margin-top: 1.5%;
+}
 
 
 #Titre  {
   font-family: Lato2;
   animation: wheelHueColor 6s ; color: rgb(97,97,97);
+
+  color:#616161;
+}
 }
 #sous-titre {
-  font-family: Lato2;
+  font-family: Lato3;
+  font-size: 30px;
+
+  color: #616161;
+
 
 }
 

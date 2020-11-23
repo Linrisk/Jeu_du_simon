@@ -10,6 +10,7 @@ let backgrounddark="#303030";
 
 function hidestart(id,idpassage) {
 	document.getElementById(id).style.display = 'none';
+	document.getElementById('aide').style.display = 'none';
 	document.getElementById(idpassage).style.display = 'flex'; 
 	  // indic none temporairement test//
 		document.getElementById('infos').style.display = 'flex'; 
@@ -122,15 +123,10 @@ function affKeyCode()
 	
 }
 
-function restart(){
-	 document.getElementById('textes').style.display = 'flex';
-	 	 document.getElementById('start').style.display = 'flex';
-	 	   document.getElementById('textes').className = "row align-items-center h-75"; 
-	 	 document.getElementById('perdu').style.display = 'none'; 
-	 	 
-}
 
-
+   function Redirection(){
+        document.location.href="index.html";
+      }
 
 function switchcolor(niveau){
 	console.log(niveau);
@@ -148,27 +144,27 @@ function switchcolor(niveau){
 
 		case '68':
 			idel='carre1';
-			couleurarrv="#FF3827";
-			couleurdep="#B23025";
+			couleurarrv="##F82614";
+			couleurdep="#D83B2D";
 		break;
 
 
 		case '70':
 			idel='carre2';
-			couleurarrv="#4CE737";
-			couleurdep="#36B225";
+			couleurarrv="#94FF8D";
+			couleurdep="#6DBF67";
 		break;
 
 		case '72':
 			idel='carre3';
-			couleurarrv="#FAF733";
-			couleurdep="#EBC727";
+			couleurarrv="#EBC135";
+			couleurdep="#ECCC61";
 		break;
 
 		case '74':
 			idel='carre4';
-			couleurarrv="#FDB65E";
-			couleurdep="#DA8B28";
+			couleurarrv="#126BF1";
+			couleurdep="#5A99F8";
 		break;
 
 	}
@@ -202,6 +198,12 @@ function Darkmode(nbCheck) {
         		document.getElementById("Titre").style.color="#B7A9A9";
         		document.getElementById("sous-titre").style.color="#B7A9A9";
         		document.getElementById("infos").style.color="#B7A9A9";
+        		document.getElementById("start").style.color='#302E2E';
+        		document.getElementById("start").style.backgroundColor= "#FFFFFF";
+        		document.getElementById("level1").style.backgroundColor="#575757";
+        		
+
+
 
 
     }
@@ -211,6 +213,7 @@ function Darkmode(nbCheck) {
     			document.getElementById("Titre").style.color="black";
     			document.getElementById("sous-titre").style.color="black";
     			document.getElementById("infos").style.color="#212529";
+    			document.getElementById('aide').style.display = 'flex';
 
 
 
