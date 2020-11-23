@@ -11,7 +11,7 @@ let backgrounddark="#303030";
 function hidestart(id,idpassage) {
 	document.getElementById(id).style.display = 'none';
 	document.getElementById(idpassage).style.display = 'flex'; 
-	document.getElementById('indic').style.display = 'flex'; 
+	  // indic none temporairement test//
 		document.getElementById('infos').style.display = 'flex'; 
 	niveau=[];
 }        
@@ -84,11 +84,23 @@ function affKeyCode()
 				} else {
 
 			 		setTimeout(function(){
-							alert("GG WP MONTAGE DE NIVEAU !");
-							niveautotal=niveautotal+1;
+			 			document.getElementById('textes').style.display='none';
+			 			document.getElementById('alert').style.display = 'flex';
+			 			document.getElementById('infos').style.display = 'none'; 
+			 			document.getElementById('level1').style.display = 'none';
+							setTimeout(function(){
+								niveautotal=niveautotal+1;
 							console.log(niveautotal);
 							points=points+1;
-							passageniveau();
+								document.getElementById('alert').style.display = 'none';
+								document.getElementById('infos').style.display = 'flex'; 
+			 				document.getElementById('level1').style.display = 'flex';
+			 						 			document.getElementById('textes').style.display='flex';
+
+							passageniveau()
+							},2500);
+							// document.getElementById(idpassage).style.display = 'flex'; 
+							
 
 						},100);
 
@@ -96,9 +108,10 @@ function affKeyCode()
 				}
 	 		} else {
 	 	
-	 			document.getElementById('level1').style.display = 'none'; 
-	 			document.getElementById('perdu').style.display = 'flex'; 
-	 			document.getElementById('indic').style.display = 'none'; 
+	 			document.getElementById('textes').style.display='none';
+			 			document.getElementById('perdu').style.display = 'flex';
+			 			document.getElementById('infos').style.display = 'none'; 
+			 			document.getElementById('level1').style.display = 'none';
 	 			etat=0;
 
 	 		}
@@ -110,8 +123,11 @@ function affKeyCode()
 }
 
 function restart(){
-	 document.getElementById('start').style.display = 'flex';
-	 document.getElementById('perdu').style.display = 'none'; 
+	 document.getElementById('textes').style.display = 'flex';
+	 	 document.getElementById('start').style.display = 'flex';
+	 	   document.getElementById('textes').className = "row align-items-center h-75"; 
+	 	 document.getElementById('perdu').style.display = 'none'; 
+	 	 
 }
 
 
@@ -179,3 +195,29 @@ function switchcolor(niveau){
 }
 
 document.body.addEventListener('keydown',affKeyCode);
+
+function Darkmode(nbCheck) {
+    if(document.getElementById(nbCheck).checked == true){
+        		document.getElementById("body").style.backgroundColor = "#303030";
+        		document.getElementById("Titre").style.color="#B7A9A9";
+        		document.getElementById("sous-titre").style.color="#B7A9A9";
+        		document.getElementById("infos").style.color="#B7A9A9";
+
+
+    }
+
+    else {
+    			document.getElementById("body").style.backgroundColor = "#EEEEEE";
+    			document.getElementById("Titre").style.color="black";
+    			document.getElementById("sous-titre").style.color="black";
+    			document.getElementById("infos").style.color="#212529";
+
+
+
+    }
+}
+
+function changeClass() { 
+    document.getElementById('textes').className = "row"; 
+}
+212529

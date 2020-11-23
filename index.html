@@ -1,80 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Simon Game Project</title>
+	<title>Jeu du simon</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets\css\index.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
-<!-- onkeydown="affKeyCode(event)" -->
-<body>
-<div class="container-fluid">
-	<div class="row">
-		<label class="switch">
-		  <input type="checkbox">
-		  <span class="slider round"></span>
-		</label>
-	</div>
+<body id="body">
 
-	<div class="row" >
-		<div class="col-lg-12 text-center">
-			<h1> JEU DU SIMON </h1>
-		</div>
-	</div>
-	<div class="row" id="spe">
-		<div class="col-lg-12 text-center js">
-			<h2>HTML/CSS/JS Project </h2>
-		</div>
-	</div>
-	<div class="row"></div>
-
-	<div class="row mx-auto " id="infos">
-
-		<div class="col-lg-4">
-			<h2>Niveau <span id="sum"></span> </h2>
+	<div class="container-fluid h-100">
+		<div class="row mr-5 justify-content-end align-items-center"  style="height: 10% !important;">
+			<div class="custom-control custom-switch  ">
+			  <input type="checkbox" onclick="Darkmode('customSwitches');" class="custom-control-input btn-lg" id="customSwitches">
+			  <label class="custom-control-label" for="customSwitches"></label>
+			</div>
 		</div>
 
-		<div class="col-lg-4">
-			<h2>08:00</h2>
-		</div>
+	    <div class="row align-items-center h-75" id="textes">
+	        <div class="col-lg-12">
+	            <div  class=" h-100 justify-content-center text-center">
+	                <div>
+	                   <h1 id="Titre" > JEU DU SIMON </h1>
+	                   <h2 id="sous-titre"><i>HTML/CSS/JS Project </i> </h2>
+	                   	<button type="button" id="start" onclick=" changeClass(); hidestart('start','level1'); passageniveau();" class="btn btn-secondary btn-lg starting share-button">START</button>
 
-		<div class="col-lg-4">
-			<h2>Points : <span id="sum2"></span></h2>
-			
-		</div>
-	</div>
 
-	<div class="row bg-alert corps ">
-		<div class="col-lg-12 ">
-			
-			<div class="row text-center "  id=start>
-				<div class="col-lg-12 ">
-					<button type="button" id=start onclick="hidestart('start','level1');passageniveau();" class="btn-lg "> Start </button>
-				</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	   
+		<div class="row mx-auto text-center mt-5 " id="infos">
+
+			<div class="col-lg-4">
+				<h2>Niveau <span id="sum"></span> </h2>
 			</div>
 
+			<div class="col-lg-4">
+				<h2>08:00</h2>
+			</div>
 
-			<div id=level1 class="row mx-auto carres">
+			<div class="col-lg-4">
+				<h2>Points : <span id="sum2"></span></h2>
+					
+			</div>
+		</div>
+
+	   	<div id="level1" class="row mx-auto align-items-center ">
+	   		
+				<div class="col-lg-3  ">
+					<div id="carre1" class="carre1 mx-auto "></div>
+				</div>
+
 				<div class="col-lg-3 ">
-					<div id=carre1 class="carre mx-auto"></div>
-				</div>
-
-				<div class="col-lg-3">
-					<div id=carre2 class="carre2 mx-auto"></div>
+					<div id="carre2" class="carre2 mx-auto"></div>
 
 				</div>
 
-				<div class="col-lg-3">
-					<div id=carre3 class="carre3 mx-auto"></div>
+				<div class="col-lg-3  ">
+					<div id="carre3" class="carre3 mx-auto"></div>
 
 				</div>
 
-				<div class="col-lg-3">
-					<div id=carre4 class="carre4 mx-auto"></div>
+				<div class="col-lg-3  ">
+					<div id="carre4" class="carre4 mx-auto"></div>
 				</div>
 
-			</div>
+			
+		</div>
 
 			<div class="row indi justify-content-center mx-auto text-center mt-5" id=indic >
 				<div class="col-lg-3">
@@ -94,20 +89,45 @@
 				</div>
 			</div> 
 
-			<div class="row text-center "  id=perdu>
+		<!--	<div class="row text-center "  id=perdu>
 				<div class="col-lg-12 ">
 					<h2> Tu as perdu!</h2>
-					<button type="button" id=start onclick="restart();" class="btn-lg ">Recommencer? </button>
+					<button type="button" id="start" onclick="restart();" class="btn-lg ">Recommencer? </button>
 
 				</div>
 			</div>
+ -->
+			<div class="row align-items-center h-100 mt-2" id="alert">
+		        <div class="col-lg-12">
+		        	<div class="row text-center justify-content-center">
+				         <div id="dialog"  title="Basic dialog"class=" h-100 justify-content-center text-center align-items-center">
+			  				<h2 style="font-family: 'Lato2';">Bravo vous avez reussi le niveau, vous allez passer a la suite !</h2>
+						</div>
+					</div>
 
-		</div>
-	</div>
+					<div class="row text-center mt-0 justify-content-around">
+						<div class="spinner" role="status"></div>	
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-center h-7" id="perdu">
+		        <div class="col-lg-12">
+		        	<div class="row text-center justify-content-center">
+				         <div class=" h-100 justify-content-center text-center align-items-center">
+							<h2> Tu as perdu!</h2>
+						</div>
+					</div>
+
+					<div class="row text-center mt-0 justify-content-around">
+						<button type="button" id="start2" onclick="restart();" class="btn-lg ">Recommencer? </button>
+	
+					</div>
+				</div>
+			</div>
 
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="assets/js/index.js"></script>

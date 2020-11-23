@@ -1,34 +1,37 @@
-.carre {
-    height: 200px ;
+.carre1 {
+     height: 260px;
     width: 200px ;
-    background-color: rgb(178,48,37);
+    background-color: rgba(216,59,45,0.86);
     
 }
 
+
 .carre2 {
-    height: 200px ;
-    width: 200px ;
-    background-color: rgb(54,178,37);
+     height: 260px;
+      width: 200px ;
+    background-color: rgba(109,191,103,1);
     
 }
 
 .carre3 {
-    height: 200px ;
-    width: 200px;
-    background-color: rgb(235,199,39);
+    height: 260px;
+    width: 200px ;
+    background-color: rgba(236,204,97,1);
     
 }
 
 .carre4 {
-     height: 200px ;
+     height: 260px;
     width: 200px ;
-    background-color: rgb(218,139,40);
-    
+    background-color: rgba(90,153,248,1);  
 }
+
 h1{
 
-	font-size: 100px ;
+	font-size: 130px ;
+ 
 }
+
 
 .js{
 	font-size: 40px ;
@@ -39,14 +42,9 @@ h1{
 
 }
 html {
-	font-family: 'Open Sans', sans-serif;
 	overflow: none;
 }
 
-.carres {
-	margin-left:10% ;
-	margin-top: 15vh;
-	display: none ;}
 
 #perdu {
 	display: none;
@@ -64,11 +62,24 @@ html {
 	display: none;
 	font-size: 6vh;	
 	opacity:0.6;
+
 }
 
-
+#level1 {
+  margin-top: 6% !important;
+  background-color: #FFFFFF;
+  justify-content: center;
+  width: 53%;
+  height: 33% !important;
+  display: none; 
+border-radius: 10px;}
+}
 button{
-	display: all;
+	display: all; 
+  font-family: Lato2;
+  border-radius:70%!important ; 
+  width: 10%; 
+  font-size: 30px;
 }
 
 body{
@@ -77,66 +88,78 @@ body{
 
 }
 
-/* Bouton toggle */
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+.starting {
+	border-radius: 10px !important;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+
+
+@font-face {
+ font-family: 'Lato1' ;
+ src: local("Lato-Black"), 
+ url("assets/fonts/Lato-Black.ttf") format("ttf");
+}
+@font-face {
+ font-family: 'Lato2';
+ src: local("Lato-Bold"), 
+ url("assets/fonts/Lato-Bold.ttf") format("ttf");
 }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+
+
+#Titre  {
+  font-family: Lato2;
+  animation: wheelHueColor 6s ; color: rgb(97,97,97);
+}
+#sous-titre {
+  font-family: Lato2;
+
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+@keyframes wheelHueColor {
+    from, to { color: rgb(97, 97, 97); }
+    20%     { color: rgb(216, 59, 45); }
+    40%      { color: rgb( 109, 191, 103); }
+    60%      { color: rgb( 236, 204, 97); }
+    80%      { color: rgb(90, 153, 248); }
+    100%     { color: rgb(97, 97, 97); }
+   
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+.cont {
+  background-color: blue;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+#alert{
+  display: none;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+.spinner {
+  width: 90px;
+  height: 90px;
+  background-color: #333;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
 }
 
-.slider.round:before {
-  border-radius: 50%;
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
 }
