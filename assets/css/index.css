@@ -1,39 +1,102 @@
+/* Font faces */
+
+
+
+@font-face {
+ font-family: 'Lato1' ;
+ src: local("Lato-Black"), 
+ url("assets/fonts/Lato-Black.ttf") format("ttf");
+}
+@font-face {
+ font-family: 'Lato2';
+ src: local("Lato-Bold"), 
+ url("assets/fonts/Lato-Bold.ttf") format("ttf");
+}
+
+@font-face {
+ font-family: 'Lato3';
+ src: local("Lato-Italic"), 
+ url("assets/fonts/Lato-Italic.ttf") format("ttf");
+}
+
+@font-face {
+ font-family: 'Lato4';
+ src: local("Lato-Regular"), 
+ url("assets/fonts/Lato-Regular.ttf") format("ttf");
+}
+
+ 
+ /* Carrés */
+
 .carre1 {
-     height: 260px;
-    width: 200px ;
+     height: 200px;
+    width: 160px ;
     background-color: rgba(216,59,45,0.86);
     
 }
 
 
 .carre2 {
-     height: 260px;
-      width: 200px ;
+     height: 200px;
+    width: 160px ;
     background-color: rgba(109,191,103,1);
     
 }
 
 .carre3 {
-    height: 260px;
-    width: 200px ;
+   height: 200px;
+    width: 160px ;
     background-color: rgba(236,204,97,1);
     
 }
 
 .carre4 {
-     height: 260px;
-    width: 200px ;
+    height: 200px;
+    width: 160px ;
     background-color: rgba(90,153,248,1);  
+
 }
+/* Lettres */
+
+.lettre1{
+  font-size: 70px;
+  font-family: Lato4;
+  color: white;
+}
+
+/* Elements*/
+
+button{
+  display: all; 
+  font-family: Lato4;
+    font-size: 26px;
+}
+
+body{
+  height: 100vh;
+  background-color: #EEEEEE;
+}
+
+html {
+  overflow: none;
+}
+
+h1{
+
+  font-size: 160px ;
+ 
+}
+
+/*Modifs */
+
+
+
+
 #help {
     border-radius: 50%;
 
 }
-h1{
 
-	font-size: 160px ;
- 
-}
 
 
 .js{
@@ -44,11 +107,6 @@ h1{
 	margin-top: 10px;
 
 }
-html {
-	overflow: none;
-}
-
-
 
 
 #perdu {
@@ -56,7 +114,10 @@ html {
 }
 #start {
 	margin-top: 30px;
-  font-size:30px;
+  font-size:30px; 
+  font-family: Lato2 !important;
+  border-radius:9%!important ; 
+
 }
 
 #start2 {
@@ -80,48 +141,17 @@ html {
   margin-top: 6% !important;
   background-color: #FFFFFF;
   justify-content: center;
-  width: 53%;
-  height: 33% !important;
+  width: 56%;
+  height: 34% !important;
   display: none; 
 border-radius: 10px;}
 }
-button{
-	display: all; 
-  font-family: Lato2;
-  border-radius:70%!important ; 
-  width: 10%; 
-  font-size: 30px;
-}
-
-body{
-	height: 100vh;
-	background-color: #EEEEEE;
-
-}
-
 
 .starting {
 	border-radius: 10px !important;
 }
 
 
-
-@font-face {
- font-family: 'Lato1' ;
- src: local("Lato-Black"), 
- url("assets/fonts/Lato-Black.ttf") format("ttf");
-}
-@font-face {
- font-family: 'Lato2';
- src: local("Lato-Bold"), 
- url("assets/fonts/Lato-Bold.ttf") format("ttf");
-}
-
-@font-face {
- font-family: 'Lato3';
- src: local("Lato-Italic"), 
- url("assets/fonts/Lato-Italic.ttf") format("ttf");
-}
 
 
 
@@ -195,4 +225,10 @@ body{
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+/*Essai plugin dark-mode */
+
+.darkmode--activated h1, .darkmode--activated h2 {
+  color: #B7A9A9;
 }
