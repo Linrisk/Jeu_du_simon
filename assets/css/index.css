@@ -1,7 +1,5 @@
 /* Font faces */
 
-
-
 @font-face {
  font-family: 'Lato1' ;
  src: local("Lato-Black"), 
@@ -64,6 +62,23 @@
   color: white;
 }
 
+.lettre2{
+  font-size: 70px;
+  font-family: Lato4;
+  color: white;
+}
+
+.lettre3{
+  font-size: 70px;
+  font-family: Lato4;
+  color: white;
+}
+
+.lettre4{
+  font-size: 70px;
+  font-family: Lato4;
+  color: white;
+}
 /* Elements*/
 
 button{
@@ -75,10 +90,13 @@ button{
 body{
   height: 100vh;
   background-color: #EEEEEE;
+  align-items: center;
 }
 
 html {
   overflow: none;
+  padding: 0;
+  margin: 0;
 }
 
 h1{
@@ -89,14 +107,10 @@ h1{
 
 /*Modifs */
 
-
-
-
 #help {
     border-radius: 50%;
 
 }
-
 
 
 .js{
@@ -145,7 +159,9 @@ h1{
   height: 34% !important;
   display: none; 
 border-radius: 10px;}
-}
+
+
+
 
 .starting {
 	border-radius: 10px !important;

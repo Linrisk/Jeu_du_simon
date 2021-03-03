@@ -10,7 +10,6 @@ let backgrounddark="#303030";
 
 function HideStart(id,idpassage) {
 	document.getElementById(id).style.display = 'none';
-	document.getElementById('aide').style.display = 'none';
 	document.getElementById(idpassage).style.display = 'flex'; 
 	  // indic none temporairement test//
 	document.getElementById('infos').style.display = 'flex'; 
@@ -152,8 +151,6 @@ function switchcolor(niveau){
 
 	}
 
-	
-
 setTimeout(function(){
 	document.getElementById(idel).style.backgroundColor = couleurarrv;
 },500);
@@ -171,27 +168,6 @@ setTimeout(function(){
 
 document.body.addEventListener('keydown',AffKeyCode);
 
-function Darkmode(nbCheck) {
-
-    if(document.getElementById(nbCheck).checked == true){
-        document.getElementById("body").style.backgroundColor = "#303030";
-        document.getElementById("Titre").style.color="#B7A9A9";
-        document.getElementById("sous-titre").style.color="#B7A9A9";
-       	document.getElementById("infos").style.color="#B7A9A9";
-       	document.getElementById("start").style.color='#302E2E';
-       	document.getElementById("start").style.backgroundColor= "#FFFFFF";
-       	document.getElementById("level1").style.backgroundColor="#575757";
-       	document.getElementById("perdu").style.color="#B7A9A9";
-       	document.getElementById("alert").style.color="#B7A9A9";
-    }
-
-    else {
-   		document.getElementById("body").style.backgroundColor = "#EEEEEE";
-    	document.getElementById("Titre").style.color="black";
-    	document.getElementById("sous-titre").style.color="black";
-    	document.getElementById("infos").style.color="#212529";
-    }
-}
 
 function ChangeClass() { 
     document.getElementById('textes').className = "row"; 
